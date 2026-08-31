@@ -1,18 +1,18 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.3.0
+    rev: v6.0.0
     hooks:
     -   id: check-yaml
     -   id: end-of-file-fixer
     -   id: trailing-whitespace
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.3.1
+    rev: v3.21.2
     hooks:
       - id: pyupgrade
         args:
           - --py38-plus
-  - repo: https://github.com/myint/autoflake
-    rev: v2.0.1
+  - repo: https://github.com/PyCQA/autoflake
+    rev: v2.4.0
     hooks:
       - id: autoflake
         args:
@@ -20,7 +20,7 @@ repos:
           - --remove-all-unused-imports
           - --ignore-init-module-imports
   - repo: https://github.com/pycqa/flake8
-    rev: 7.0.0
+    rev: 7.3.0
     hooks:
       - id: "flake8"
         entry: pflake8
@@ -30,10 +30,10 @@ repos:
         args:
           - --config=pyproject.toml
   - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
+    rev: 9.0.1
     hooks:
       - id: isort
   - repo: https://github.com/psf/black-pre-commit-mirror
-    rev: 23.12.1
+    rev: 26.5.1
     hooks:
       - id: black
